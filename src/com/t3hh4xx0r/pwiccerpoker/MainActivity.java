@@ -46,8 +46,8 @@ public class MainActivity extends Activity {
 				final String path = data.getStringExtra("RESULT");
 				AlertDialog.Builder b = new AlertDialog.Builder(this);
 				b.setTitle("Got a result from Pwiccer");
-				b.setMessage("Would you like to view it?");
-				b.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+				b.setMessage(data.getStringExtra("RESULT_TEXT"));
+				b.setPositiveButton("View it", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface arg0, int arg1) {
 						Intent intent = new Intent();
